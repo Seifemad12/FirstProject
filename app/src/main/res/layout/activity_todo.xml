@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Ui.TodoActivity"
+        android:orientation="vertical"
+        android:background="@color/teal_700"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="@color/teal_700"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/toolbar"
+            app:popupTheme="@style/popUpTheme"
+            >
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/hidden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No list available"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            >
+        </TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle"
+            tools:listitem="@layout/list_todo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+</layout>
